@@ -23,10 +23,8 @@ IUS DRRP
 Technical Device Description and Internal Architecture
 Version: v0.1
 
-====================================================================
 
 1. DEVICE IDENTIFICATION
-====================================================================
 
 Official device name:
 IUS DRRP
@@ -47,9 +45,6 @@ A self-contained, tactile, low-latency audio instrument/device capable of:
 * dedicated line-level input and output
 * operation without dependence on cloud services or smartphone-style UI
 
-====================================================================
-2. EXECUTIVE TECHNICAL SUMMARY
-==============================
 
 IUS DRRP is a portable, offline-first digital audio device designed around a Linux-based compute module, dedicated DAC/ADC audio hardware, physical transport and mode controls, and a compact visual interface. The product is intended to merge the functional roles of a local audio player, field/line recorder, and offline radio receiver into a single coherent hardware platform.
 
@@ -57,9 +52,6 @@ The design objective is to avoid touchscreen-centric interaction and instead pro
 
 The current technical direction is based on a Raspberry Pi 4 compute subsystem paired with a dedicated DAC+ADC audio HAT, additional headphone amplification, offline local storage, and a high-contrast compact OLED display system.
 
-====================================================================
-3. CORE PRODUCT GOALS
-=====================
 
 3.1 Functional goals
 
@@ -85,9 +77,7 @@ The current technical direction is based on a Raspberry Pi 4 compute subsystem p
 * Migration path toward more integrated/custom hardware in later revisions.
 * Support for small-batch UK-based design, assembly, QA, and serviceability.
 
-====================================================================
-4. PRIMARY USE CASES
-====================
+* **PRIMARY USE CASES** 
 
 4.1 Playback use cases
 
@@ -111,9 +101,7 @@ The current technical direction is based on a Raspberry Pi 4 compute subsystem p
 * Radio mode with explicit display indication.
 * Optional radio capture/record-to-storage workflow.
 
-====================================================================
-5. SYSTEM ARCHITECTURE OVERVIEW
-===============================
+* **SYSTEM ARCHITECTURE OVERVIEW**
 
 High-level functional architecture:
 
@@ -135,9 +123,8 @@ Core subsystems:
 * Power subsystem
 * Mechanical enclosure and thermal subsystem
 
-====================================================================
-6. COMPUTE SUBSYSTEM
-====================
+
+* **COMPUTE SUBSYSTEM**
 
 Current preferred processor platform:
 Raspberry Pi 4, 2GB RAM
@@ -177,11 +164,9 @@ Preferred software philosophy:
 * Avoidance of unnecessary graphical stacks
 * Explicit control over audio routing and sample-rate behavior
 
-====================================================================
-7. AUDIO SUBSYSTEM
-==================
 
-7.1 Core audio board
+
+**Core audio board**
 Selected concept hardware:
 HiFiBerry DAC+ ADC
 
@@ -219,9 +204,7 @@ Target practical quality levels:
 Design philosophy:
 The product prioritizes transparent real-world playback and recording quality through good converter stages, correct signal routing, and physical I/O quality rather than pursuing extreme sample-rate marketing.
 
-====================================================================
-8. AUDIO SIGNAL PATHS
-=====================
+* **AUDIO SIGNAL PATHS**
 
 8.1 Playback path
 [Storage / File System]
@@ -249,9 +232,7 @@ The product prioritizes transparent real-world playback and recording quality th
 --> [ADC / Recording path]
 --> [Storage]
 
-====================================================================
-9. I/O ARCHITECTURE
-===================
+* **I/O ARCHITECTURE**
 
 9.1 Required external I/O
 
@@ -311,11 +292,8 @@ PORT_06 = RADIO_ANTENNA (optional visible or internal)
 TYPE    = RF input / antenna interface
 ROLE    = FM / DAB radio front end
 
-====================================================================
-10. DISPLAY AND UI SUBSYSTEM
-============================
 
-Selected display direction:
+- Selected display direction:
 256 x 64 OLED
 
 Display function goals:
@@ -336,9 +314,8 @@ Design goals for UI:
 * No smartphone-like dependency
 * Hardware and display treated as one system
 
-====================================================================
-11. CONTROL SUBSYSTEM
-=====================
+
+* **CONTROL SUBSYSTEM**
 
 Physical controls expected:
 
@@ -365,9 +342,9 @@ CTRL_05 = MENU / EQ / MODE (revision dependent)
 CTRL_06 = VOLUME_KNOB
 CTRL_07 = TUNE_OR_SELECT_KNOB
 
-====================================================================
-12. RADIO SUBSYSTEM
-===================
+
+* **RADIO SUBSYSTEM**
+
 
 Primary requirement:
 Offline radio compatibility.
@@ -394,9 +371,7 @@ Radio mode goals:
 * Radio tuning should be tactile and visible
 * Device should feel like a real radio-capable object, not just a media player with a hidden radio module
 
-====================================================================
-13. STORAGE SUBSYSTEM
-=====================
+* **STORAGE SUBSYSTEM**
 
 Primary storage medium:
 
@@ -419,9 +394,8 @@ File strategy:
 * Avoid forced streaming dependence
 * Direct support for lossless and practical hi-res formats
 
-====================================================================
-14. POWER SUBSYSTEM
-===================
+
+* **POWER SUBSYSTEM**
 
 Two product directions have been discussed:
 
@@ -450,28 +424,10 @@ Power goals:
 * Clean supply strategy to reduce noise in audio path
 
 
-MIT License
 
 Copyright (c) 2026 Pezhman Farhangi
 I/US Music
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
 
 Trademark and Brand Notice
 
@@ -504,6 +460,22 @@ js
 assets
   images
     ius-official-logo.png
+
+
+
+
+## No Warranty
+
+This software, hardware prototype, and all associated materials are provided "as is", without warranty of any kind, express or implied, including but not limited to merchantability, fitness for a particular purpose, and noninfringement.
+
+In no event shall the author or copyright holder be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the software or the use or other dealings in the software.
+
+## Contact
+
+For licensing requests, commercial rights, redistribution requests, or permission to use protected brand assets, prior written permission must be obtained from I/US Music.
+If this repository is hosted publicly on GitHub, GitHub users may have certain limited rights to view and fork the repository through GitHub’s own platform functionality, as required by GitHub’s Terms of Service. No permission is granted beyond those minimum platform rights unless explicit written permission is given by I/US Music.
+
+# I/US Source-Available License 1.0
 
 
 <a href="LICENSE">
