@@ -1,3 +1,8 @@
+
+<a href="LICENSE">
+  <img src="images/license-badge.png" alt="License badge" width="70">
+</a>
+
 IUS DRRP Web App
 
 https://github.com/IUSmusic/IUS-DRRP
@@ -499,3 +504,10 @@ js
 assets
   images
     ius-official-logo.png
+
+
+<a href="LICENSE">
+  <img src="images/license-badge.png" alt="License badge" width="70">
+</a>
+
+
